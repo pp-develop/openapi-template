@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: API Documents
+  description: |-
+    ### テンプレート
+  version: 1.0.0
+servers:
+  - url: https://example.com
+    description: 開発環境
+  - url: https://example.com
+    description: ステージング環境
+  - url: https://example.com
+    description: 本番環境
+tags:
+  - name: sample
+    description: sampleのOpenAPI
+paths:
+  /sample:
+    $ref: "./paths/sample/feature/api.yml"

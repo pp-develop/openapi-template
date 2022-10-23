@@ -1,0 +1,91 @@
+tags:
+  - sample
+summary: 情報を取得
+description: 指定したIDの情報を取得します
+operationId: getSample
+parameters:
+  - in: query
+    name: access_token
+    description: アクセストークン
+    schema:
+      type: string
+    required: true
+  - in: query
+    name: sample_id
+    description: サンプルID
+    schema:
+      type: integer
+    required: true
+responses:
+  "200":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            sample:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+            select_group_ids:
+              type: object
+  "400":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"
+  "403":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"
+  "404":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"
+  "500":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"

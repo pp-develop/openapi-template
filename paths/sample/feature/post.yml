@@ -1,0 +1,84 @@
+tags:
+  - sample
+summary: 情報作成
+description: 情報を作成
+operationId: postSample
+requestBody:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          access_token:
+            type: string
+            description: アクセストークン
+        required:
+          - access_token
+responses:
+  "200":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            sample_id:
+              type: integer
+              enum:
+                - 1
+  "400":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"
+  "403":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"
+  "404":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"
+  "500":
+    description: ""
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            errors:
+              type: object
+              properties:
+                message:
+                  type: string
+                  enum:
+                    - "error message"
