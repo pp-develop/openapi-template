@@ -5,7 +5,7 @@
     ```
     $ docker-compose up -d
     ```
-2. OpenAPIを更新
+2. ファイルを更新
 3. http://localhost:80 へ変更が反映されます  
 
     使用しているシェルスクリプト  
