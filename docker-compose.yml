@@ -2,7 +2,9 @@ version: "3.9"
 
 services:
   nginx:
-    image: nginx:stable-alpine
+    build:
+      context: ./build/docker/nginx
+      dockerfile: Dockerfile
     container_name: nginx
     volumes:
       - ./build/.:/usr/share/nginx/html/
@@ -10,8 +12,9 @@ services:
       - 80:80
 
   node:
-    build: ./build/docker/
-    image: node
+    build:
+      context: ./build/docker/node
+      dockerfile: Dockerfile
     container_name: node
     volumes:
       - .:/usr/src/app
