@@ -6,11 +6,11 @@
 version: 2
 updates:
   - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/build/nginx" # Location of package manifests
+    directory: "/build/docker/nginx" # Location of package manifests
     schedule:
       interval: "daily"
 
   - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/build/node" # Location of package manifests
+    directory: "/build/docker/node" # Location of package manifests
     schedule:
       interval: "daily"
