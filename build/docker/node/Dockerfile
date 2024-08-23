@@ -1,4 +1,4 @@
-FROM node:22.6.0
+FROM node:22.7.0
 
 RUN npm install -g redoc-cli @apidevtools/swagger-cli
 
